@@ -1,0 +1,185 @@
+body{
+    display:flex;
+    justify-content: center;
+    background-image: url("/Users/minibuddha/Desktop/FEWDR-1030/Final_Project/vinyl_image.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-color: black;
+    background-attachment:fixed;
+    font-family: Ubuntu;
+    color: rgb(238, 238, 180);
+    
+}
+header{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;   
+}
+header img{
+    width: 150px;
+    height: 150px;
+    border: 2px solid rgb(126, 125, 125);
+}
+.pictures{
+    transition: all 0.4s ease-in-out 0s;
+}
+.pictures:hover{
+    transform: rotate(45deg)
+}
+.Marvin-Gaye{
+    display:flex;
+    justify-content: center;
+    
+}
+#MG{
+    text-align: center;
+    background-color: goldenrod;
+    color: rgb(134, 10, 35);
+    font-size: 40px;
+    border-radius: 20px;
+    border-bottom-color: rgb(68, 7, 7);
+    margin-top: 10px;
+    font-style: italic;
+}
+#MG:hover{
+    color: yellow;
+}
+.facts{ 
+    padding-top: 15px;
+    border-radius: 10px;
+    min-width: 300px;
+    min-height: 300px;
+    background-color: rgb(250, 231, 182);
+    opacity: .75;
+    display:none;
+    color: rgb(212, 16, 16);
+    text-align: center;
+    list-style: none; 
+}
+.musicbox{
+    display: flex;
+    justify-content: space-between;  
+    opacity: .9;
+    border-radius: 10px;
+    border: 5px ridge rgb(241, 229, 229);
+    max-width: 900px;
+    margin: 40px auto;
+    box-shadow: 10px 10px rgb(126, 125, 125)
+}
+
+#tracklist{
+    border: 5px solid rgb(133, 32, 32);
+    background: radial-gradient(black,rgb(39, 38, 38),rgb(49, 49, 49), rgb(60, 61, 61));
+    border-radius: 5px;
+    min-height: 380px;
+    min-width: 380px;   
+}
+#tracklist ul li{
+    list-style: none;
+}
+.button1,.button2,.button3,.button4,.button5{
+    font-size: 20px;
+    height:50px;
+    width:200px;
+    background-color: darkred;
+    color: rgb(238, 238, 180);
+    margin-bottom: 20px;
+}
+.button1:hover,.button2:hover,.button3:hover,.button4:hover,.button5:hover{
+    opacity: .3;
+    width: 220px;
+    border: 2px dashed dotted white;
+    box-shadow: 5px 5px grey;
+}
+p.display{ 
+    color: rgb(238, 238, 180);
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    font-weight: lighter;
+}
+a:visited{
+    color: white;
+}
+p.precious-lyrics, p.grapevine-lyrics, p.whats-going-on, p.mercy-lyrics, p.sexual-healing{
+    display: none;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: lighter;
+    overflow: scroll;
+    height: 200px;
+    width: 325px;
+    border: 1px solid lightgoldenrodyellow;
+}
+p.readless, p.readless2, p.readless3, p.readless4, p.readless5, p.writers1, p.writers2,p.writers3,p.writers4,p.writers5{
+    display:none;
+    font-size:14px;
+}
+#Precious, #Grapevine, #WGO, #Mercy, #Healing{
+    display:none;
+    margin-bottom: 10px;
+}
+#turntable{
+    position: relative;
+    border: 5px solid rgb(133, 32, 32);
+    border-radius: 5px;
+    background: linear-gradient(black,rgb(70, 70, 70),rgb(150, 144, 144), rgb(99, 55, 55), rgb(161, 71, 71));
+    height:380px;
+    width:380px;
+    opacity: 1;
+}
+#record{
+    position: absolute;
+    top: 80px;
+    left: 70px;
+    width: 250px;
+    height: 250px;
+    opacity: 1;
+    transition: all 0.4s ease-in-out 0s;
+    background: url(https://cdn.rawgit.com/florentb/turntable/gh-pages/images/turntable_disk.png) no-repeat;
+}
+#record:hover{
+    transform: rotate(85deg);
+
+}
+#turntable.started #record {
+    animation: spin-disk 4s linear infinite;
+}
+#turntable.paused #record {
+    animation: spin-disk 0s none;
+} 
+@keyframes spin-disk {
+100% {
+    transform: rotate(360deg);
+}
+}
+
+@media screen and (max-width: 768px){
+.musicbox, header{
+    display: block;
+    justify-content: center;
+    max-width: 420px;
+}
+header{
+    margin-left: 150px;
+}
+.pictures:hover{
+    transform:rotate(15deg);
+    margin-bottom: 5px;
+    
+}
+#tracklist, #turntable{
+    min-width: 300px;
+
+}
+#turntable{
+    align-self: center;
+}
+.facts{
+    margin-left: 80px;
+}
+.pics{
+    display:none;
+
+}
+}
